@@ -416,7 +416,7 @@ class App:
             for c in range(cols):
                 cell = cells[idx]
 
-                if c == 2:
+                if c == 2 and r == 0:
                     labels.append("empty")
                     idx += 1
                     continue
@@ -485,7 +485,7 @@ class App:
             for c in range(cols):
                 cell = cells[idx]
 
-                if c == 2:  # 3rd slot is always empty
+                if c == 2 and r == 0:  # 3rd slot is always empty
                     lbl = "empty"
                     fname = os.path.join("dataset", f"{idx:05d}_{lbl}.png")
                     cv2.imwrite(fname, cell)
